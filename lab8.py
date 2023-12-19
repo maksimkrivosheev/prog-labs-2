@@ -1,6 +1,5 @@
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask import abort, Blueprint, render_template, request, make_response, redirect, session
-import psycopg2
 from db import db
 from db.models import users, articles
 from flask_login import login_user, login_required, current_user, logout_user
@@ -12,9 +11,15 @@ def main():
     return render_template("lab8/index.html")
 
 courses = [
-    {"name": "c++", "videos": 3, "price": 3000},
-    {"name": "basic", "videos": 30, "price": 0},
-    {"name": "c#", "videos": 8}
+    {"name": "c++", "videos": 30, "price": 3000},
+    {"name": "basic", "videos": 30, "price": 11110},
+    {"name": "c#", "videos": 8, "price": 3000}    
+    {"name": "sql", "videos": 3, "price": 32400},
+    {"name": "afna", "videos": 30, "price": 60000},
+    {"name": "c", "videos": 8, "price": 5000}
+    {"name": "assembler", "videos": 3, "price": 3000},
+    {"name": "pascal", "videos": 30, "price": 4000},
+    {"name": "pyton", "videos": 8, "price": 3000}
 ]
 
 @lab8.route('/lab8/api/courses/', methods=['GET'])
