@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кривошеев Максим Сергеевич, Гавра Владислав Артемович, ФБИ-11 . {% block lab %}{% endblock %}</title>
+    <title>КривошеевГавра {% block lab %}{% endblock %}</title>
     <link rel="stylesheet", type="text/css" href="{{ url_for('static', filename='lab1.css') }}">
     {% if request.cookies.get('color') or request.cookies.get('background-color') or request.cookies.get('font-size') %}
         <style>
-            body {
+/*             body {
                 background-color: {{request.cookies.get('background-color')}};
                 font-size: {{request.cookies.get('font-size')}};
                 color: {{request.cookies.get('color')}};
-            }
+            } */
         </style>
     {% endif %}
     {% block script %}{% endblock %}
@@ -25,7 +25,7 @@
         {% block main%}{% endblock %}
     </main>
     <footer>
-        &copy; Кривошеев Максим Сергеевич, Гавра Владислав Артемович, ФБИ-11 , 3 курс, 2023
+        &copy; КривошеевГавра 3 курс, 2023
     </footer>
 </body>
 </html>
